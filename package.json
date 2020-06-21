@@ -5,15 +5,21 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config ./app/index.js",
-    "start": "node -r dotenv/config ./app/index.js"
+    "dev": "nodemon -r dotenv/config src/index.js",
+    "start": "node -r dotenv/config src/index.js"
   },
   "keywords": [],
   "author": "Arthur Chubukliiev",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.13",
+    "sequelize-cli": "^5.5.1",
+    "yup": "^0.29.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"

@@ -10,7 +10,7 @@ const UserSchema = yup.object({
   email: yup.string().trim().email().when('$action',
       actionsRequired([ACTION.SIGN_UP, ACTION.LOGIN, ACTION.CREATE])),
   password: yup.string().
-      matches(PASSWORD_RULE.pattern, PASSWORD_RULE.message).
+      matches(PASSWORD_RULE.PATTERN, PASSWORD_RULE.MESSAGE).
       when('$action',
           actionsRequired([ACTION.SIGN_UP, ACTION.LOGIN, ACTION.CREATE])),
 });

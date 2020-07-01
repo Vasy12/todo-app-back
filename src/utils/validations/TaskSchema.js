@@ -1,5 +1,5 @@
 const yup = require('yup');
-const {ACTION} = require('./../../../src/constants.js');
+const {ACTION} = require('../../constants.js');
 const {actionsRequired} = require('./utils');
 
 const requiredOnCreate = actionsRequired([ACTION.CREATE]);

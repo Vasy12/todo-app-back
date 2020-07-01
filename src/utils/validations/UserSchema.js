@@ -1,5 +1,5 @@
 const yup = require('yup');
-const {ACTION, PASSWORD_RULE} = require('./../../../src/constants.js');
+const {ACTION, PASSWORD_RULE} = require('../../constants.js');
 const {actionsRequired} = require('./utils');
 
 const UserSchema = yup.object({

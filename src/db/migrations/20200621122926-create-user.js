@@ -48,15 +48,20 @@ module.exports = {
     /**
      * first & last names attributes "CHECK" constraint conditions
      * */
-    const createNameCheckOptions = (isFirstName = false) => ( {
-      type: 'check',
-      fields: [`${isFirstName ? 'first' : 'last'}Name`],
-      where: {
-        firstName: {
-          [Op.regexp]: '^[a-z]+$',
-        },
-      },
-    } );
+    const createNameCheckOptions = (isFirstName = false) => {
+      const fieldName = `${isFirstName ? 'first' : 'last'}Name`;
+      return (
+        {
+          type: 'check',
+          fields: [fieldName],
+          where: {
+            [fieldName]: {
+              [Op.iRegexp]: '^[a-z]+$',
+            },
+          },
+        }
+      );
+    };
 
     /**
      * Add "CHECK" constraints to first & last names attributes

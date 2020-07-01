@@ -1,4 +1,4 @@
-const {ApplicationError} = require('./../../utils/errors');
+const {ApplicationError} = require('../../errors');
 const {BaseError} = require('sequelize');
 const {ValidationError} = require('yup');
 

@@ -19,7 +19,7 @@ module.exports.applicationErrorHandler = (err, req, res, next) => {
   return next(err);
 };
 
-/** Handle sequelize ORM errors
+/** Sequelize errors handler
  *
  * @param err
  * @param req
@@ -33,7 +33,7 @@ module.exports.sequelizeErrorHandler = (err, req, res, next) => {
   }
   return next(err);
 };
-/** Handle validation errors
+/** Validation errors handler
  *
  * @param err
  * @param req
@@ -48,7 +48,7 @@ module.exports.validationErrorHandler = (err, req, res, next) => {
   return next(err);
 };
 
-/** handle unknown errors
+/** Internal server errors handler
  *
  * @param err
  * @param req

@@ -1,5 +1,5 @@
 'use strict';
-const Op = require('sequelize').Op;
+const {Op} = require('sequelize');
 
 const tableName = 'Users';
 

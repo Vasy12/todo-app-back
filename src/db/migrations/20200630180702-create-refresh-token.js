@@ -28,6 +28,7 @@ module.exports = {
       },
       body: {
         allowNull: false,
+        unique: true,
         type: Sequelize.TEXT,
       },
       createdAt: {

@@ -1,6 +1,8 @@
+'use strict';
+
 module.exports.ApplicationError = require('./ApplicationError.js');
 module.exports.AuthenticationTimeoutError = require(
-  './AuthenticationTimeoutError.js');
+    './AuthenticationTimeoutError.js');
 module.exports.BadRequestError = require('./BadRequestError.js');
 module.exports.ConflictError = require('./ConflictError.js');
 module.exports.UnauthorizedError = require('./UnauthorizedError.js');

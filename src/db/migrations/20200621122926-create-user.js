@@ -1,4 +1,5 @@
 'use strict';
+const {ROLE} = require('../../enums');
 const {Op} = require('sequelize');
 
 const tableName = 'Users';
@@ -24,6 +25,11 @@ module.exports = {
                 allowNull: false,
                 unique: true,
                 type: Sequelize.STRING,
+            },
+            role: {
+                type: Sequelize.ENUM(Object.values(ROLE)),
+                defaultValue: ROLE.USER,
+                allowNull: false,
             },
             passwordHash: {
                 allowNull: false,
